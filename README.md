@@ -1,7 +1,7 @@
 # Web Portfolio
 ## Portfolio
 ## By Kakusha Venecia
-This is an Akan Name Generator .
+This is an Akan Name Generator.
 ## Table of Content
 
 + [Description](#description)
