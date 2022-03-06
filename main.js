@@ -12,7 +12,7 @@ function validate() {
   }
   else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) || 
   document.myForm.month.value > 12  || document.myForm.month.value <= 0){
-     alert( "Please provide your month of birth!" );
+     alert( "Please provide a valid month!" );
      document.myForm.month.focus() ;
      return false;
   }
