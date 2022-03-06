@@ -1,0 +1,95 @@
+body {
+  background-image:url(images/pic.jpeg);
+  background-repeat: no repeat;
+  padding:right 200px;
+  padding:left 200px;
+  padding:top 15px;
+  margin-right: 150px;
+  margin-left: 100px
+}
+header{
+text-decoration: wavy;
+font-size: 60px;
+text-align: center;
+text-shadow: 60px;
+color: rgb(238, 208, 36);
+}
+
+div{
+  color: rgb(250, 242, 242);
+  font-weight: bold;
+  font-size: 25px;
+  float: right;
+padding-left: 30px;
+content:width 40px;
+}
+
+h2{
+  float: right;
+
+  text-align: left;
+  padding-right:160px;
+  line-height: 40px;
+  text-decoration: overline;
+  text-decoration-thickness: 4px;
+  color: rgb(255, 255, 255);
+}
+.container{
+  color: blanchedalmond;
+  float:right;
+  border-style: dotted;
+  box-sizing: border-box;
+  width: 90%; height: 70%;
+  padding: 22px;
+  border: 1px solid rgb(228, 9, 9);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+legend{
+text-align: center;
+font-size: 25px;
+font-weight:bold
+}
+button[type=submit] {
+  background-color: #ffc402;
+  font-size:18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: grab;
+
+}
+p{
+font-size: 20px;
+font-weight: bold;
+padding: 2px;
+
+}
+
+label{
+font-size: 20px;
+font-weight:lighter;
+padding: 12px;
+
+
+}
+
+input[type=text] {
+width: 10%;
+padding: 10px;
+
+border: none;
+background: #f1f1f1;
+
+}
+
+h3{
+float: left;
+text-decoration-color: aqua;
+text-align-last: left;
+color: beige;
+}
