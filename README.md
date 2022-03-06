@@ -2,6 +2,7 @@
 ## Portfolio
 ## By Kakusha Venecia
 This is an Akan Name Generator.
+
 ## Table of Content
 
 + [Description](#description)
@@ -21,5 +22,6 @@ JS - Used for interactivity
 ## Licence
 <a href="https://github.com/KakushaVenecia/ip-two/blob/main/LICENSE">Licence<a>
 
-Authors Info
-Git Hub Profile- [Venecia Kakusha] (https://github.com/KakushaVenecia)
+#Authors Info
+
+ <a href= "https://github.com/KakushaVenecia">Git Hub Profile-[Venecia Kakusha]<a/>
