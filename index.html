@@ -27,45 +27,25 @@
 <br>
 <div class="box"
     <p>
-        Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. <br>
+        Akan names are derived from <strong> Ghanain Culture </strong>. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. <br>
     If you want to know your Akan name, please fill in the below prompts and submit!
     </p>
 </div>
 
 <form id="nameGeneratorForm" method="POST" onSubmit="submitFunction(event)">
-  <div class="form-group row">
-    <label for="Year" class="col-md-2 col-form-label">Year of Birth</label>
-    <div class="col-md-5">
-      <input type="number" class="form-control" id="year" min="1900" max="2100" required>
+    <label for="Year">Year of Birth</label> &nbsp &nbsp &nbsp  
+      <input type="number" class="form-control" id="year" min="1900" max="2100" required> &nbsp &nbsp &nbsp &nbsp &nbsp  
+    <label for="month">Month</label> &nbsp &nbsp &nbsp 
+      <input type="number" class="form-control" id="month" min="1"  max="12" required> &nbsp &nbsp &nbsp &nbsp &nbsp
+    <label for="day" class="col-md-2 col-form-label">Day</label> &nbsp &nbsp &nbsp &nbsp
+      <input type="number" class="form-control" id="day" min="1" max="31" required> &nbsp &nbsp &nbsp &nbsp &nbsp 
     </div>
-    <br>
-    <br>
-  </div>
-  <div class="form-group row">
-    <label for="month" class="col-md-2 col-form-label">Month</label>
-    <div class="col-md-5">
-      <input type="number" class="form-control" id="month" min="1"  max="12" required>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="day" class="col-md-2 col-form-label">Day</label>
-    <div class="col-md-5">
-      <input type="number" class="form-control" id="day" min="1" max="31" required>
-    </div>
-  <fieldset class="form-group row">
     <select id="gender">
-      <option value="select-gender">select gender</option>
+      <option value="select-gender">select gender</option> 
       <option value="male">Male</option>
-      <option value="female">Female</option>
-    </select>
-    <div class="col-md-10">
-      <div class="form-check">
-        
-      </div>
+      <option value="female">Female</option>  
+    </select> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
     </div>
-  </fieldset>
-  <div class="form-group row">
-    <div class="col-md-10">
       <button onclick= "generateAkan()" type="button" id = submit class="btn btn-primary">Generate  </button>
     </div>
   </div>
@@ -73,9 +53,11 @@
 <br>
 <br>
 <section>
-<h3>
+<h2>
 
 Thank you for stopping by! Share with your Friends!
+
+</h2>
 
 </div>
 
