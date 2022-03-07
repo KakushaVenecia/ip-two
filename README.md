@@ -1,7 +1,7 @@
 # Web Portfolio
 ## Portfolio
 ## By Kakusha Venecia
-This is an Akan Name Generator.
+This is an Akan Name Generator. Akan is a clan in Ghana. In this clan, people are named according to the day one was born. This is an Akan Name generator. 
 
 ## Table of Content
 
