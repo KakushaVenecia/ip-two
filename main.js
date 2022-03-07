@@ -13,17 +13,5 @@ function generateAkan() {
   var month = document.getElementById("month").value;
   var day = document.getElementById("day").value;
   var gender = document.getElementById("gender").value;
-  let birthday = new Date(`${year}-${month}-${day}`)
-  let dateString = birthday.toDateString()
-  let birthDate = birthday.getDay()
-  if (gender == "male") {
-    let name = maleNames[birthDate]
-    alert("Since you were born on " + " "+ " " +dateString + " "+ ", Your Akan Name is" + name)
-  } else if (gender == "female") {
-    let name = femaleNames[birthDate]
-    alert("Since you were born on" +  " " + " " +dateString +  " " +" Your Akan Name is" + name)
-  } else {
-    alert("Please select gender")
-  }
-
+  
   }
