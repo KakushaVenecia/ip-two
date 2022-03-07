@@ -22,9 +22,9 @@ function generateAkan(){
   }    
 
   if (month > 12 || month < 1){
-     alert ("Invalid month")
+     alert (" Please input a month")
   }
   if (day > 31 || month <1){
-    alert ("Invalid date")
+    alert ("This month inout is invalid")
   }
 }
