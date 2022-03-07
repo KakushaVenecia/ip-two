@@ -34,7 +34,7 @@ h2{
   text-decoration-thickness: 4px;
   color: rgb(255, 255, 255);
 }
-.container{
+form{
   color: blanchedalmond;
   float:right;
   border-style: dotted;
@@ -91,5 +91,5 @@ h3{
 float: left;
 text-decoration-color: aqua;
 text-align-last: left;
-color: beige;
+color: rgb(255, 255, 255);
 }
