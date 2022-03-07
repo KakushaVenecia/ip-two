@@ -1,53 +1,58 @@
 body {
-  background-image:url(images/pic.jpeg);
+  background-image: url(images/pic.jpeg);
   background-repeat: no repeat;
-  padding:right 200px;
-  padding:left 200px;
-  padding:top 16px;
+  padding: right 200px;
+  padding: left 200px;
+  padding: top 16px;
   margin-right: 150px;
   margin-left: 100px
 }
-header{
-text-decoration: wavy;
-font-size: 60px;
-text-align: center;
-text-shadow: 66px;
-color: rgb(238, 208, 36);
+
+header {
+  text-decoration: wavy;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 66px;
+  color: rgb(238, 208, 36);
 }
 
-div{
+div {
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 25px;
   float: right;
-padding-left: 30px;
-content:width 40px;
+  padding-left: 30px;
+  content: width 40px;
 }
 
-h2{
+h2 {
   float: right;
 
   text-align: left;
-  padding-right:160px;
+  padding-right: 160px;
   line-height: 40px;
   text-decoration: overline;
   text-decoration-thickness: 4px;
   color: rgb(255, 255, 255);
 }
-form{
+
+form {
   color: blanchedalmond;
-  float:right;
-  border-style: dotted;;
-  width: 90%; height: 60%;
+  float: right;
+  border-style: dotted;
+  ;
+  width: 90%;
+  height: 60%;
   padding: 10px;
   border: 10px solid rgb(228, 9, 9);
   border-radius: 15px;
   resize: vertical;
   row-gap: 10px;
 }
+
 select {
   background-color: #ffc402;
-  font-size:18px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   padding: 10px 16px;
@@ -57,14 +62,15 @@ select {
 }
 
 
-legend{
-text-align: center;
-font-size: 25px;
-font-weight:bold
+legend {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold
 }
+
 button {
   background-color: #ffc402;
-  font-size:18px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   padding: 10px 16px;
@@ -74,16 +80,16 @@ button {
 
 }
 
-p{
-font-size: 20px;
-font-weight: bold;
-padding: 2px;
+p {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px;
 
 }
 
-label{
+label {
   background-color: #ffc402;
-  font-size:18px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   padding: 10px 10px;
@@ -96,16 +102,17 @@ label{
 
 input[type=number] {
   border-left: 10px;
-width: 80px; height: 45px;
-border-radius: 5px;
-border-style: hidden;
-background: #b3b9b9;
+  width: 80px;
+  height: 45px;
+  border-radius: 5px;
+  border-style: hidden;
+  background: #b3b9b9;
 
 }
 
-h3{
-float: left;
-text-decoration-color: aqua;
-text-align-last: left;
-color: rgb(255, 255, 255);
+h3 {
+  float: left;
+  text-decoration-color: aqua;
+  text-align-last: left;
+  color: rgb(255, 255, 255);
 }
