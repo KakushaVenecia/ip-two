@@ -1,111 +1,111 @@
-const maleNames = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
-const femaleNames = [
-  "Akosua",
-  "Adwoa",
-  "Abenaa",
-  "Akua",
-  " Yaa",
-  "Afua",
-  "Ama",
-];
-const daysOfTheWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+// Akan name data
+const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+// Name meanings
+const nameMeanings = {
+  "Kwasi": "Born on Sunday; associated with the universe and spirituality",
+  "Kwadwo": "Born on Monday; symbolizes peace and gentleness",
+  "Kwabena": "Born on Tuesday; represents the ocean and wisdom",
+  "Kwaku": "Born on Wednesday; associated with the forest and healing",
+  "Yaw": "Born on Thursday; symbolizes the earth and stability",
+  "Kofi": "Born on Friday; represents fertility and abundance",
+  "Kwame": "Born on Saturday; symbolizes balance and authority",
+  "Akosua": "Born on Sunday; represents nurturing and compassion",
+  "Adwoa": "Born on Monday; symbolizes peace and kindness",
+  "Abenaa": "Born on Tuesday; associated with strength and resilience",
+  "Akua": "Born on Wednesday; represents wisdom and knowledge",
+  "Yaa": "Born on Thursday; symbolizes prosperity and growth",
+  "Afua": "Born on Friday; associated with love and abundance",
+  "Ama": "Born on Saturday; represents power and leadership"
+};
+
+// DOM elements
+const generateBtn = document.getElementById('generateBtn');
+const birthdateInput = document.getElementById('birthdate');
+const genderSelect = document.getElementById('gender');
+const displayNameEl = document.getElementById('displayName');
+const dayDisplayEl = document.getElementById('dayDisplay');
+const loadingSpinner = document.getElementById('loadingSpinner');
+const nameMeaningEl = document.getElementById('nameMeaning');
+const meaningTextEl = document.getElementById('meaningText');
+const dateErrorEl = document.getElementById('dateError');
+
+// Event listeners
+generateBtn.addEventListener('click', generateAkan);
+
+// Functions
 function generateAkan() {
-  var year = document.getElementById("year").value;
-  var month = document.getElementById("month").value;
-  var day = document.getElementById("day").value;
-  var gender = document.getElementById("gender").value;
-  console.log("Generate Akan");
-  console.log(year, month, day, gender);
-  clearName();
-  const isValidInput = validateInput(month, day);
-  console.log("isValid", isValidInput);
-  if (isValidInput) {
-    var d = getDayWeek(year, month, day);
-    const name = getName(gender, d);
-    console.log("name", name);
-    displayName(name);
+  // Reset previous errors and displays
+  resetDisplay();
+  
+  // Get input values
+  const birthdate = birthdateInput.value;
+  const gender = genderSelect.value;
+  
+  // Validate inputs
+  if (!birthdate) {
+    showError('Please select your date of birth');
+    return;
   }
-}
-
-// // Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
-
-//  where;
-
-//  CC - is the century digits. For example 1989 has CC = 19
-
-//  YY - is the Year digits (1989 has YY = 89)
-
-//  MM -  is the Month
-
-//  DD - is the Day of the month
-
-//  mod - is the modulus function ( % )
-
-function getDayWeek(year, month, day) {
-  var yearArray = year.split("");
-  console.log("yearArray", yearArray);
-  var CC = parseInt(`${yearArray[0]}${yearArray[1]}`);
-  console.log("CC", CC);
-  var YY = parseInt(`${yearArray[2]}${yearArray[3]}`);
-  console.log("YY", YY);
-  var MM = month;
-  var DD = day;
-  var d =
-    (Math.round(CC / 4) -
-      2 * CC -
-      1 +
-      Math.round((5 * YY) / 4) +
-      26 * Math.round((MM + 1) / 10) +
-      DD) %
-    7;
-  console.log("d", d);
-  return d;
-}
-
-function getName(gender, d) {
-  let name = "";
-  if (gender === "male") {
-    name = maleNames[d];
-  } else if (gender === "female") {
-    name = femaleNames[d];
-  } else {
+  
+  if (!gender) {
+    showError('Please select your gender');
+    return;
   }
-  return name;
+  
+  // Show loading spinner
+  loadingSpinner.classList.add('active');
+  
+  // Simulate loading (for UX purposes)
+  setTimeout(() => {
+    try {
+      // Parse date
+      const date = new Date(birthdate);
+      
+      // Get day of week (0 = Sunday, 6 = Saturday)
+      const dayOfWeek = date.getDay();
+      
+      // Get Akan name based on gender and day of week
+      const akanName = gender === 'male' ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+      
+      // Display results
+      displayNameEl.textContent = akanName;
+      dayDisplayEl.textContent = `Born on ${daysOfTheWeek[dayOfWeek]}`;
+      
+      // Show name meaning
+      if (nameMeanings[akanName]) {
+        meaningTextEl.textContent = nameMeanings[akanName];
+        nameMeaningEl.classList.add('active');
+      }
+      
+      // Hide loading spinner
+      loadingSpinner.classList.remove('active');
+    } catch (error) {
+      console.error(error);
+      showError('Something went wrong. Please try again.');
+      loadingSpinner.classList.remove('active');
+    }
+  }, 800);
 }
-function displayName(name) {
-  document.getElementById(
-    "displayName"
-  ).innerHTML = `Your Akan Name is ${name}`;
+
+function showError(message) {
+  dateErrorEl.textContent = message;
+  dateErrorEl.classList.add('active');
 }
-function validateInput(month, day) {
-  let isValid = true;
-  if (month > 12 || month < 1 || month === "") {
-    alert(" Please input a month");
-    isValid = false;
-  }
-  if (day > 31 || day < 1 || day === "") {
-    alert("This day input is invalid");
-    isValid = false;
-  }
-  return isValid;
+
+function resetDisplay() {
+  displayNameEl.textContent = '';
+  dayDisplayEl.textContent = '';
+  dateErrorEl.textContent = '';
+  dateErrorEl.classList.remove('active');
+  nameMeaningEl.classList.remove('active');
 }
-function clearName() {
-  document.getElementById("displayName").innerHTML = "";
-}
+
+// Initialize with current date
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+birthdateInput.setAttribute('max', `${year}-${month}-${day}`);
